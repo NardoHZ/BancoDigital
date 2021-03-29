@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="809.0" styleClass="colorBranco" stylesheets="@../CSS/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TransferenciasController">
+   <children>
+      <Label alignment="CENTER" layoutX="175.0" layoutY="46.0" prefHeight="49.0" prefWidth="460.0" text="Transferência entre contas Banco Digital" textAlignment="CENTER" textFill="#012245" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="SimSun" size="22.0" />
+         </font>
+      </Label>
+      <Pane layoutX="241.0" layoutY="165.0" prefHeight="271.0" prefWidth="327.0">
+         <children>
+            <Label layoutX="1.0" layoutY="5.0" text="Agência:">
+               <font>
+                  <Font name="Trebuchet MS" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="53.0" text="Conta:">
+               <font>
+                  <Font name="Trebuchet MS" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfAgencia" layoutX="74.0" onKeyReleased="#identificarFavorecido" prefHeight="31.0" prefWidth="55.0" style="-fx-border-color: #aaa;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfConta" layoutX="59.0" layoutY="48.0" onKeyReleased="#identificarFavorecido" onMouseClicked="#limparDescricao" prefHeight="31.0" prefWidth="79.0" style="-fx-border-color: #aaa;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="145.0" layoutY="54.0" text="-">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfDigito" layoutX="158.0" layoutY="48.0" onKeyReleased="#identificarFavorecido" prefHeight="31.0" prefWidth="30.0" style="-fx-border-color: #aaa;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutY="132.0" text="Valor:">
+               <font>
+                  <Font name="Trebuchet MS" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfValor" layoutX="57.0" layoutY="127.0" prefHeight="31.0" prefWidth="115.0" promptText="R$ 0,00" style="-fx-border-color: #aaa;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1.0" layoutY="180.0" text="Senha:">
+               <font>
+                  <Font name="Trebuchet MS" size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="tfSenha" layoutX="59.0" layoutY="175.0" prefHeight="31.0" prefWidth="100.0" style="-fx-border-color: #aaa;" />
+            <Label fx:id="lbFavorecido" layoutX="1.0" layoutY="92.0">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btConfirmarTransferencia" disable="true" focusTraversable="false" layoutX="37.0" layoutY="231.0" onAction="#confirmarTransferencia" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #012245;" text="Confirmar" textFill="#f8f8f8">
+               <font>
+                  <Font name="Trebuchet MS" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

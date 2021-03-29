@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginCadastroController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #012245;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="141.0" layoutY="60.0" text="b">
+               <font>
+                  <Font name="Sitka Small Bold" size="70.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.5619047619047619" endY="0.5619047619047619" startX="0.6523809523809523" startY="0.40476190476190477">
+                     <stops>
+                        <Stop color="#d2dfeb" />
+                        <Stop color="#063a6b" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label layoutX="173.0" layoutY="81.0" text="d">
+               <font>
+                  <Font name="Sitka Small Bold" size="70.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.5619047619047619" endY="0.5619047619047619" startX="0.6523809523809523" startY="0.40476190476190477">
+                     <stops>
+                        <Stop color="#d2dfeb" />
+                        <Stop color="#063a6b" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label layoutX="53.0" layoutY="171.0" text="Banco Digital" textFill="WHITE">
+               <font>
+                  <Font name="Sitka Small Bold" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="lbTexto1" layoutX="59.0" layoutY="220.0" text="É rápido e fácil abrir a sua" textFill="#fcf6f6">
+               <font>
+                  <Font name="Trebuchet MS" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbTexto2" layoutX="59.0" layoutY="241.0" text="conta digital!" textFill="#fcf6f6">
+               <font>
+                  <Font name="Trebuchet MS" size="18.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="cartao" arcHeight="5.0" arcWidth="5.0" height="172.0" layoutX="47.0" layoutY="341.0" stroke="#e0e2e1" strokeType="INSIDE" width="267.0">
+               <fill>
+                  <LinearGradient endX="0.6428571428571428" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="109.0" layoutY="353.0" text="Banco Digital">
+               <font>
+                  <Font name="Sitka Small Bold" size="20.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#220808" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="81.0" layoutY="437.0" text="5504 0414 4154 4512" textFill="#22211c">
+               <font>
+                  <Font name="Trebuchet MS" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="77.0" layoutX="79.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/chip-cartao.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="81.0" layoutY="483.0" text="Fulano de Tal" textFill="#22211c">
+               <font>
+                  <Font name="Trebuchet MS" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="463.0" text="Venc. 12/22" textFill="#22211c">
+               <font>
+                  <Font name="Trebuchet MS" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="77.0" layoutX="225.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/mastercard-logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="anchorLogin" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-border-color: #012245;">
+               <children>
+                  <Label layoutX="258.0" layoutY="46.0" text="Faça seu login" textFill="#012245">
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="235.0" layoutY="171.0" text="CPF" textFill="#012245">
+                     <font>
+                        <Font name="Trebuchet MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="235.0" layoutY="282.0" text="Senha" textFill="#012245">
+                     <font>
+                        <Font name="Trebuchet MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink accessibleRole="IMAGE_VIEW" layoutX="226.0" layoutY="471.0" onAction="#abrirCadastro" text="Clique aqui e faça o seu cadastro!" textFill="#012245">
+                     <font>
+                        <Font name="Trebuchet MS" size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <JFXTextField fx:id="tfCPFLogin" focusColor="#012245" layoutX="235.0" layoutY="190.0" onKeyReleased="#tfCPFLoginFormat" prefHeight="40.0" prefWidth="224.0" promptText="000.000.000-00">
+                     <font>
+                        <Font name="Trebuchet MS" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="tfSenhaLogin" focusColor="#012245" layoutX="235.0" layoutY="301.0" prefHeight="40.0" prefWidth="224.0" promptText="Informe sua senha">
+                     <font>
+                        <Font name="Trebuchet MS" size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton focusTraversable="false" layoutX="273.0" layoutY="389.0" onAction="#abrirCliente" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #012245;" text="Entrar" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Trebuchet MS" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <Button layoutX="640.0" layoutY="1.0" mnemonicParsing="false" onAction="#fecharJanela" prefHeight="25.0" prefWidth="32.0" styleClass="buttonFecharLogin" stylesheets="@../CSS/Style.css" text="X" textFill="#f8f8f8" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="608.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimizarJanela" prefHeight="25.0" prefWidth="30.0" styleClass="buttonMinimizarLogin" stylesheets="@../CSS/Style.css" text="__" textFill="#012245" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorCadastro" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-border-color: #012245;" visible="false">
+               <children>
+                  <Label layoutX="242.0" layoutY="36.0" text="Faça seu cadastro" textFill="#012245" AnchorPane.topAnchor="46.0">
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="26.0" layoutY="130.0">
+                     <children>
+                        <Label text="Nome" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfNome" focusColor="#012245" layoutY="19.0" prefHeight="35.0" prefWidth="190.0" promptText="Informe seu nome">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutY="65.0" text="Sobrenome" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfSobrenome" focusColor="#012245" layoutY="84.0" prefHeight="35.0" prefWidth="190.0" promptText="Informe seu sobrenome">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutY="133.0" text="CPF" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfCPFCadastro" focusColor="#012245" layoutY="152.0" onKeyReleased="#tfCPFCadastroFormat" prefHeight="35.0" prefWidth="190.0" promptText="Informe seu CPF">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutY="198.0" text="Data de Nascimento" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="dpNascimento" defaultColor="#012245" layoutY="217.0" prefHeight="35.0" prefWidth="190.0" promptText="Informe sua data de nascimento" />
+                        <Label layoutX="218.0" text="Sexo" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cbSexo" focusColor="#012245" layoutX="218.0" layoutY="19.0" prefHeight="35.0" prefWidth="190.0" promptText="Selecione" />
+                        <Label layoutX="218.0" layoutY="65.0" text="Profissão" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfProfissao" focusColor="#012245" layoutX="218.0" layoutY="84.0" prefHeight="35.0" prefWidth="190.0" promptText="Informe sua profissão">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="218.0" layoutY="133.0" text="Renda" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="cbRenda" focusColor="#012245" layoutX="218.0" layoutY="152.0" prefHeight="35.0" prefWidth="190.0" promptText="Selecione" />
+                        <Label layoutX="218.0" layoutY="201.0" text="Telefone" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfTelefone" focusColor="#012245" layoutX="218.0" layoutY="217.0" onKeyReleased="#tfTelefoneFormat" prefHeight="35.0" prefWidth="190.0" promptText="informe seu telefone">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="432.0" text="Logradouro" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfLogradouro" focusColor="#012245" layoutX="432.0" layoutY="19.0" prefHeight="35.0" prefWidth="190.0" promptText="Informe seu endereco">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="432.0" layoutY="65.0" text="Bairro" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="432.0" layoutY="133.0" text="CEP" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfCEP" focusColor="#012245" layoutX="432.0" layoutY="152.0" onKeyReleased="#tfCEPFormat" prefHeight="35.0" prefWidth="190.0" promptText="Informe seu CEP">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label layoutX="432.0" layoutY="201.0" text="UF" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="tfBairro" focusColor="#012245" layoutX="432.0" layoutY="84.0" prefHeight="35.0" prefWidth="190.0" promptText="Informe seu bairro">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cbUF" focusColor="#012245" layoutX="432.0" layoutY="217.0" prefHeight="35.0" promptText="Selecione" />
+                        <Label layoutY="271.0" text="Senha" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="218.0" layoutY="271.0" text="Confirmar Senha" textFill="#012245">
+                           <font>
+                              <Font name="Trebuchet MS" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btConfirmarCadastro" layoutX="246.0" layoutY="374.0" onAction="#confirmarCadastro" onMouseEntered="#verificarCPF" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #012245;" text="Confirmar" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXPasswordField fx:id="tfSenhaCadastro" focusColor="#012245" layoutY="290.0" prefHeight="35.0" prefWidth="190.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXPasswordField fx:id="tfConfirmarSenhaCadastro" focusColor="#012245" layoutX="218.0" layoutY="290.0" prefHeight="35.0" prefWidth="190.0">
+                           <font>
+                              <Font name="Trebuchet MS" size="18.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                  </Pane>
+                  <JFXButton alignment="CENTER" focusTraversable="false" layoutX="576.0" layoutY="1.0" onAction="#voltarLogin" prefHeight="25.0" prefWidth="32.0" style="-fx-background-color: #FFF; -fx-border-color: #012245;" text="&lt;" textFill="#012245" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <Button layoutX="641.0" layoutY="1.0" mnemonicParsing="false" onAction="#fecharJanela" prefHeight="25.0" prefWidth="32.0" styleClass="buttonFecharLogin" stylesheets="@../CSS/Style.css" text="X" textFill="#f8f8f8" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="609.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimizarJanela" prefHeight="25.0" prefWidth="30.0" styleClass="buttonMinimizarLogin" stylesheets="@../CSS/Style.css" text="__" textFill="#012245" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchorLoginFuncionario" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-border-color: #012245;">
+               <children>
+                  <Label layoutX="237.0" layoutY="81.0" text="Área do funcionário" textFill="#012245">
+                     <font>
+                        <Font name="Trebuchet MS Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="236.0" layoutY="211.0" text="CPF" textFill="#012245">
+                     <font>
+                        <Font name="Trebuchet MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="236.0" layoutY="322.0" text="Senha" textFill="#012245">
+                     <font>
+                        <Font name="Trebuchet MS" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tfCPFLoginFuncionario" focusColor="#012245" layoutX="236.0" layoutY="230.0" onKeyReleased="#tfCPFLoginFuncionarioFormat" prefHeight="40.0" prefWidth="224.0" promptText="000.000.000-00">
+                     <font>
+                        <Font name="Trebuchet MS" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="tfSenhaLoginFuncionario" focusColor="#012245" layoutX="236.0" layoutY="341.0" prefHeight="40.0" prefWidth="224.0" promptText="Informe sua senha">
+                     <font>
+                        <Font name="Trebuchet MS" size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton focusTraversable="false" layoutX="274.0" layoutY="429.0" onAction="#abrirFuncionario" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #012245;" text="Entrar" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Trebuchet MS" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <Button layoutX="640.0" layoutY="1.0" mnemonicParsing="false" onAction="#fecharJanela" prefHeight="25.0" prefWidth="32.0" styleClass="buttonFecharLogin" stylesheets="@../CSS/Style.css" text="X" textFill="#f8f8f8" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="608.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimizarJanela" prefHeight="25.0" prefWidth="30.0" styleClass="buttonMinimizarLogin" stylesheets="@../CSS/Style.css" text="__" textFill="#012245" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>

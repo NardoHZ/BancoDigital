@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPaneGerente" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GerenteController">
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="1024.0" stylesheets="@../CSS/Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton focusTraversable="false" layoutX="652.0" onAction="#relatorioFinanceiro" prefHeight="50.0" prefWidth="274.0" stylesheets="@../CSS/Style.css" text="        Relatório Financeiro" textFill="#d7d1d1">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttonFinal" />
+                  <String fx:value="buttonUnderline" />
+                  <String fx:value="buttonConfig" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="449.0" onAction="#detalhesEmprestimo" prefHeight="50.0" prefWidth="273.0" stylesheets="@../CSS/Style.css" text="Empréstimos" textFill="#d7d1d1">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttonMeio" />
+                  <String fx:value="buttonUnderline" />
+                  <String fx:value="buttonConfig" />
+               </styleClass>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="44.0" onAction="#homeFuncionario" prefHeight="50.0" prefWidth="251.0" stylesheets="@../CSS/Style.css" text="Home" textFill="#d7d1d1">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttonPrimeiro" />
+                  <String fx:value="buttonUnderline" />
+                  <String fx:value="buttonConfig" />
+               </styleClass>
+            </JFXButton>
+            <Button layoutX="974.0" mnemonicParsing="false" onAction="#fecharJanela" prefHeight="50.0" prefWidth="50.0" styleClass="buttonMinimizarFechar" stylesheets="@../CSS/Style.css" text="X" textFill="#f8f8f8" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="925.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimizarJanela" prefHeight="50.0" prefWidth="50.0" styleClass="buttonMinimizarFechar" stylesheets="@../CSS/Style.css" text="__" textFill="#f8f8f8" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <MenuButton mnemonicParsing="false" prefHeight="50.0" prefWidth="67.0" style="-fx-border-color: #fff;" styleClass="menuButton" stylesheets="@../CSS/Style.css">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#abrirMeusDados" text="Meus Dados" />
+                  <MenuItem mnemonicParsing="false" onAction="#sairGerente" text="Sair" />
+               </items>
+            </MenuButton>
+            <JFXButton focusTraversable="false" layoutX="234.0" onAction="#listaClientes" prefHeight="50.0" prefWidth="273.0" stylesheets="@../CSS/Style.css" text="Clientes" textFill="#d7d1d1">
+               <font>
+                  <Font name="Trebuchet MS" size="15.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttonMeio" />
+                  <String fx:value="buttonUnderline" />
+                  <String fx:value="buttonConfig" />
+               </styleClass>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="550.0" prefWidth="215.0" styleClass="lateralEsquerda" stylesheets="@../CSS/Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="15.0" layoutY="83.0" text="Bem vindo, " AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Trebuchet MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbNomeFuncionario" layoutX="15.0" layoutY="104.0" prefHeight="21.0" prefWidth="188.0" text="Gerente Geral!" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="104.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="108.0" layoutY="137.0" startX="-100.0" style="-fx-stroke-dash-array: 2;" AnchorPane.topAnchor="136.5" />
+            <Label layoutX="17.0" layoutY="154.0" text="Departamento">
+               <font>
+                  <Font name="Trebuchet MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbDepartamento" layoutX="18.0" layoutY="173.0" prefHeight="21.0" prefWidth="151.0" text="Administrativo" AnchorPane.topAnchor="173.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="109.0" layoutY="213.0" startX="-100.0" style="-fx-stroke-dash-array: 2;" AnchorPane.topAnchor="212.5" />
+            <Label layoutX="18.0" layoutY="230.0" text="Caixa">
+               <font>
+                  <Font name="Trebuchet MS Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbSaldoCaixa" layoutX="18.0" layoutY="249.0" prefHeight="21.0" prefWidth="180.0" text="R$ 999.820,00">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="17.0" layoutY="364.0" prefHeight="150.0" prefWidth="180.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="um" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="45.0" text="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="sete" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="7" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="menos" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="seis" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cinco" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="quatro" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="mais" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="+" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="tres" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="3" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="dois" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="2" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="dividir" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="igual" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="limpar" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="CL" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="zero" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="0" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="vezes" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="nove" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="oito" focusTraversable="false" mnemonicParsing="false" onAction="#acaoCliqueCalculadora" prefHeight="50.0" prefWidth="50.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <Line endX="100.0" layoutX="108.0" layoutY="294.0" startX="-100.0" style="-fx-stroke-dash-array: 2;" AnchorPane.topAnchor="293.5" />
+            <TextField fx:id="display" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="17.0" layoutY="326.0" prefHeight="38.0" prefWidth="180.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Hyperlink focusTraversable="false" layoutX="13.0" layoutY="79.0" onAction="#atualizarDados" styleClass="link" stylesheets="@../CSS/Style.css" text="Atualizar" visible="false" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Hyperlink>
+            <Label fx:id="lbHora" layoutX="16.0" layoutY="37.0" text="18:30:20" AnchorPane.leftAnchor="16.0">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbData" layoutX="16.0" layoutY="16.0" text="02/06/2019" AnchorPane.leftAnchor="16.0">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="108.0" layoutY="70.0" startX="-100.0" style="-fx-stroke-dash-array: 2;" AnchorPane.topAnchor="69.5" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

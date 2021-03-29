@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DetalhesEmprestimosController">
+   <children>
+      <TableView fx:id="tableClientes" layoutX="315.0" layoutY="142.0" prefHeight="410.0" prefWidth="342.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="480.0" AnchorPane.topAnchor="70.0">
+         <columns>
+            <TableColumn fx:id="clmCPF" prefWidth="75.0" text="CPF" />
+            <TableColumn fx:id="clmValor" prefWidth="75.0" text="Valor" />
+            <TableColumn fx:id="clmStatus" prefWidth="75.0" text="Status" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <GridPane layoutX="356.0" layoutY="96.0" prefHeight="354.0" prefWidth="433.0" AnchorPane.bottomAnchor="100.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="171.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="357.0" minWidth="10.0" prefWidth="262.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Nome:">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Sobrenome:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="CPF:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="170.0" text="Valor do empréstimo:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Divida total:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Dívida restante:" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Valor das parcelas:" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Número de parcelas:" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Parcelas restantes:" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Taxa de juros:" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Status:" GridPane.rowIndex="10">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbmostrarNome" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbMostrarSobrenome" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbMostrarCPF" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbValorEmprestimo" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbDividaTotal" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbDividaRestante" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbValorParcelas" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbNumeroParcelas" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbParcelasRestantes" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbTaxaJuros" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbStatus" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label layoutX="356.0" layoutY="70.0" styleClass="titulo" stylesheets="@../CSS/Style.css" text="Detalhes do empréstimo" textFill="#0f7e8c">
+         <font>
+            <Font name="SimSun" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btAprovar" disable="true" focusTraversable="false" layoutX="42.0" layoutY="463.0" onAction="#aprovarEmprestimo" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #012245;" text="Aprovar" textFill="#f8f8f8">
+         <font>
+            <Font name="Trebuchet MS" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btNegar" disable="true" focusTraversable="false" layoutX="183.0" layoutY="463.0" onAction="#negarEmprestimo" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #012245;" text="Negar" textFill="#f8f8f8">
+         <font>
+            <Font name="Trebuchet MS" size="18.0" />
+         </font>
+      </JFXButton>
+      <Hyperlink focusTraversable="false" onAction="#alterarTaxaJuros" styleClass="link" stylesheets="@../CSS/Style.css" text="Alterar taxa de juros" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="647.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="167.0">
+         <image>
+            <Image url="@../Imagens/copiar-png-8.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btCopiar" disable="true" focusTraversable="false" layoutX="647.0" layoutY="167.0" onAction="#copiarCPF" prefHeight="20.0" prefWidth="22.0" styleClass="buttonCopiar" stylesheets="@../CSS/Style.css" text=" " textFill="#f8f8f8" AnchorPane.topAnchor="167.0">
+         <font>
+            <Font name="Trebuchet MS" size="10.0" />
+         </font>
+      </JFXButton>
+      <Pane fx:id="paneConfirmarTransacao" layoutX="290.0" layoutY="169.0" prefHeight="182.0" prefWidth="243.0" style="-fx-border-color: #012245; -fx-background-color: #fff; -fx-border-radius: 5;" visible="false">
+         <children>
+            <Label layoutX="56.0" layoutY="14.0" styleClass="titulo" stylesheets="@../CSS/Style.css" text="Banco Digital" textFill="#0f7e8c">
+               <font>
+                  <Font name="SimSun" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="51.0" text="Digite sua senha">
+               <font>
+                  <Font name="SimSun" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="80.0" text="Senha:">
+               <font>
+                  <Font name="SimSun" size="17.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="tfSenhaTransacao" focusColor="#012245" layoutX="71.0" layoutY="77.0" onMouseClicked="#removerStatusSenhaInvalidaTransacao" prefHeight="25.0" prefWidth="87.0" />
+            <JFXButton layoutX="42.0" layoutY="143.0" onAction="#cancelarTransacao" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #012245;" text="Cancelar" textFill="WHITE" />
+            <JFXButton layoutX="132.0" layoutY="143.0" onAction="#confirmarTransacao" style="-fx-background-color: #012245;" text="Confirmar" textFill="WHITE" />
+            <Label fx:id="lbStatusSenhaTransacao" alignment="CENTER" layoutX="39.0" layoutY="110.0" prefHeight="18.0" prefWidth="165.0" textAlignment="CENTER" textFill="#e80505">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneTaxaJuros" layoutX="300.0" layoutY="179.0" prefHeight="182.0" prefWidth="243.0" style="-fx-border-color: #012245; -fx-background-color: #fff; -fx-border-radius: 5;" visible="false">
+         <children>
+            <Label layoutX="56.0" layoutY="14.0" styleClass="titulo" stylesheets="@../CSS/Style.css" text="Banco Digital" textFill="#0f7e8c">
+               <font>
+                  <Font name="SimSun" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="52.0" text="Taxa:">
+               <font>
+                  <Font name="SimSun" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="83.0" text="Senha:">
+               <font>
+                  <Font name="SimSun" size="17.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="tfSenhaTaxa" focusColor="#012245" layoutX="71.0" layoutY="75.0" onMouseClicked="#removerStatusSenhaInvalidaTaxa" prefHeight="25.0" prefWidth="87.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton layoutX="42.0" layoutY="143.0" onAction="#cancelarTaxa" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #012245;" text="Cancelar" textFill="WHITE" />
+            <JFXButton layoutX="132.0" layoutY="143.0" onAction="#confirmarTaxa" style="-fx-background-color: #012245;" text="Confirmar" textFill="WHITE" />
+            <Label fx:id="lbStatusSenhaTaxa" alignment="CENTER" layoutX="39.0" layoutY="110.0" prefHeight="18.0" prefWidth="165.0" textAlignment="CENTER" textFill="#e80505">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfTaxa" focusColor="#012245" layoutX="65.0" layoutY="46.0" prefHeight="25.0" prefWidth="91.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

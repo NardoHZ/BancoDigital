@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="809.0" styleClass="colorBranco" stylesheets="@../CSS/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PagamentosController">
+   <children>
+      <Label alignment="CENTER" layoutX="310.0" layoutY="98.0" prefHeight="35.0" prefWidth="189.0" text="Pagamentos" textAlignment="CENTER" textFill="#012245" wrapText="true" AnchorPane.topAnchor="115.0">
+         <font>
+            <Font name="SimSun" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfCodigo" layoutX="215.0" layoutY="211.0" onKeyReleased="#verificandoStatusBoleto" onMouseClicked="#limparDescricao" prefHeight="33.0" prefWidth="379.0" style="-fx-border-color: #aaa;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="215.0" layoutY="176.0" prefHeight="35.0" prefWidth="289.0" text="Informe o código para pagamento:" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="SimSun" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbDescricao" alignment="CENTER" layoutX="215.0" layoutY="249.0" prefHeight="25.0" prefWidth="379.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="SimSun" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbSenha" alignment="CENTER" layoutX="215.0" layoutY="290.0" prefHeight="33.0" prefWidth="54.0" text="Senha:" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btConfirmar" disable="true" focusTraversable="false" layoutX="340.0" layoutY="344.0" onAction="#confirmarPagamento" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #012245;" text="Confirmar" textFill="#f8f8f8">
+         <font>
+            <Font name="Trebuchet MS" size="18.0" />
+         </font>
+      </JFXButton>
+      <PasswordField fx:id="tfSenha" layoutX="273.0" layoutY="290.0" prefHeight="33.0" prefWidth="100.0" />
+   </children>
+</AnchorPane>
